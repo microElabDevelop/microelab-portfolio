@@ -18,54 +18,47 @@ python -m http.server 8080
 
 Then visit `http://localhost:8080`.
 
-## Free Hosting Options
+## Live Hosting
 
-### GitHub Pages
+Production URL:
 
-1. Create a GitHub repository.
-2. Push this folder to the repository.
-3. In GitHub, open `Settings -> Pages`.
-4. Select `Deploy from a branch`, branch `main`, folder `/root`.
-5. Keep the `CNAME` file as `microelab.com`.
+- `https://microelab.com`
+- `https://www.microelab.com`
 
-DNS records at your domain provider:
+The site is hosted on Cloudflare Pages.
 
 ```text
-Type  Name  Value
-A     @     185.199.108.153
-A     @     185.199.109.153
-A     @     185.199.110.153
-A     @     185.199.111.153
-CNAME www   your-github-username.github.io
+Cloudflare account: Microelab@gmail.com's Account
+Cloudflare Pages project: microelab
+Pages domain: microelab.pages.dev
+Custom domains: microelab.com, www.microelab.com
 ```
 
-### Netlify
-
-1. Drag this folder into Netlify Deploys, or connect the GitHub repository.
-2. Build command: leave empty.
-3. Publish directory: `.`.
-4. Add `microelab.com` in Netlify domain settings.
-
-### Cloudflare Pages
-
-1. Connect the GitHub repository to Cloudflare Pages.
-2. Build command: leave empty.
-3. Output directory: `/`.
-4. Add `microelab.com` as a custom domain.
-
-## Namecheap DNS For microelab.com
-
-In Namecheap, open `Domain List -> microelab.com -> Manage -> Advanced DNS`.
-
-Remove any old parking/default records, then add:
+GitHub repository used as the site source/backup:
 
 ```text
-Type      Host  Value                     TTL
-A Record  @     185.199.108.153           Automatic
-A Record  @     185.199.109.153           Automatic
-A Record  @     185.199.110.153           Automatic
-A Record  @     185.199.111.153           Automatic
-CNAME     www   microelabdevelop.github.io Automatic
+https://github.com/microElabDevelop/microelab-portfolio
 ```
 
-After DNS updates, GitHub Pages can reconnect `microelab.com` and enable HTTPS.
+GitHub Pages is not the active custom-domain host for `microelab.com`.
+
+## Domain Setup
+
+The domain was purchased from Namecheap. Namecheap should use Cloudflare custom nameservers:
+
+```text
+monika.ns.cloudflare.com
+troy.ns.cloudflare.com
+```
+
+DNS records are managed inside Cloudflare, not Namecheap Advanced DNS.
+
+Final Cloudflare DNS records:
+
+```text
+Type   Name             Content              Proxy
+CNAME  microelab.com    microelab.pages.dev  Proxied
+CNAME  www              microelab.pages.dev  Proxied
+```
+
+SSL is issued and managed automatically by Cloudflare Pages.

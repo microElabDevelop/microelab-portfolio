@@ -2,6 +2,12 @@
 
 Static portfolio website for `microelab.com`.
 
+Owner contact:
+
+- Fawad Butt
+- 0320 4077096
+- microElab@gmail.com
+
 ## Local Preview
 
 Open `index.html` directly in a browser, or run:
@@ -47,8 +53,19 @@ CNAME www   your-github-username.github.io
 3. Output directory: `/`.
 4. Add `microelab.com` as a custom domain.
 
-## Content To Replace
+## Namecheap DNS For microelab.com
 
-- Contact email in `index.html`
-- Real project descriptions
-- Any phone, WhatsApp, LinkedIn, or inquiry links
+In Namecheap, open `Domain List -> microelab.com -> Manage -> Advanced DNS`.
+
+Remove any old parking/default records, then add:
+
+```text
+Type      Host  Value                     TTL
+A Record  @     185.199.108.153           Automatic
+A Record  @     185.199.109.153           Automatic
+A Record  @     185.199.110.153           Automatic
+A Record  @     185.199.111.153           Automatic
+CNAME     www   microelabdevelop.github.io Automatic
+```
+
+After DNS updates, GitHub Pages can reconnect `microelab.com` and enable HTTPS.

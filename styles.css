@@ -57,17 +57,12 @@ a {
   font-weight: 750;
 }
 
-.brand-mark {
-  display: grid;
+.brand-logo {
   width: 38px;
   height: 38px;
-  place-items: center;
-  border: 1px solid rgba(49, 197, 183, 0.55);
+  object-fit: contain;
   border-radius: 8px;
-  background: rgba(49, 197, 183, 0.12);
-  color: var(--accent);
-  font-size: 0.8rem;
-  letter-spacing: 0;
+  background: #fff;
 }
 
 .nav-links {
@@ -161,6 +156,12 @@ p {
   font-size: clamp(1.05rem, 2vw, 1.32rem);
 }
 
+.hero-founder {
+  margin-bottom: 0;
+  color: var(--ink);
+  font-weight: 750;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -205,6 +206,45 @@ p {
 .section-heading {
   max-width: 760px;
   margin-bottom: 30px;
+}
+
+.founder {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.78fr) minmax(280px, 1fr);
+  gap: clamp(28px, 7vw, 84px);
+  align-items: center;
+}
+
+.founder-photo-wrap {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.founder-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.contact-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.contact-inline a {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 14px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .capability-grid {
@@ -298,6 +338,13 @@ p {
   background: linear-gradient(135deg, rgba(49, 197, 183, 0.13), rgba(244, 184, 74, 0.07));
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
 .contact h2 {
   font-size: clamp(2rem, 4.5vw, 3.2rem);
 }
@@ -327,9 +374,14 @@ p {
   }
 
   .intro,
+  .founder,
   .contact,
   .project-row {
     grid-template-columns: 1fr;
+  }
+
+  .contact-actions {
+    justify-content: flex-start;
   }
 
   .capability-grid,

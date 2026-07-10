@@ -7,7 +7,7 @@
       name="description"
       content="MicroELab builds embedded systems, industrial IoT devices, PCB hardware, firmware, automation interfaces, and production-ready electronics prototypes."
     />
-    <meta name="theme-color" content="#0b1117" />
+    <meta name="theme-color" content="#071013" />
     <meta property="og:title" content="MicroELab | Embedded Industrial Portfolio" />
     <meta
       property="og:description"
@@ -15,7 +15,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/microelab-logo.jpeg" />
-    <title>MicroELab | Embedded Industrial Portfolio</title>
+    <title>MicroELab | Industrial IoT and Embedded Systems</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -25,9 +25,14 @@
         <img class="brand-logo" src="assets/microelab-logo.jpeg" alt="" />
         <span>MicroELab</span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" data-nav aria-label="Primary navigation">
         <a href="#capabilities">Capabilities</a>
         <a href="#projects">Projects</a>
+        <a href="#systems">Systems</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -37,38 +42,61 @@
       <section class="hero" aria-labelledby="hero-title">
         <img src="assets/hero-industrial-lab.png" alt="" class="hero-image" />
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Industrial IoT · Embedded Systems · PCB Design</p>
-          <h1 id="hero-title">MicroELab</h1>
-          <p class="hero-copy">
-            Professional embedded engineering for smart monitoring devices,
-            industrial controllers, sensor systems, firmware, PCB prototypes, and
-            automation-ready electronics.
-          </p>
-          <p class="hero-founder">Founded by Fawad Butt</p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#projects">View Work</a>
-            <a class="button secondary" href="tel:+923204077096">Call Now</a>
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Industrial IoT / Embedded Systems / PCB Design</p>
+            <h1 id="hero-title">MicroELab</h1>
+            <p class="hero-copy">
+              Field-ready electronics for factories, machines, sensors, energy
+              systems, test fixtures, and connected industrial products.
+            </p>
+            <p class="hero-founder">Founder: Fawad Butt</p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button primary" href="#projects">View Projects</a>
+              <a class="button secondary" href="tel:+923204077096">Call 0320 4077096</a>
+            </div>
           </div>
-          <div class="hero-metrics" aria-label="MicroELab focus areas">
-            <span><strong>IoT</strong> Monitoring</span>
-            <span><strong>PCB</strong> Hardware</span>
-            <span><strong>MCU</strong> Firmware</span>
-          </div>
+
+          <aside class="control-panel" aria-label="Live industrial system preview">
+            <div class="panel-top">
+              <span class="status-dot"></span>
+              <span>Factory Node Online</span>
+              <strong data-uptime>99.97%</strong>
+            </div>
+            <div class="signal-board">
+              <div class="signal-card">
+                <span>Motor Load</span>
+                <strong data-metric="load">68%</strong>
+                <div class="bar"><i style="width: 68%"></i></div>
+              </div>
+              <div class="signal-card">
+                <span>Panel Temp</span>
+                <strong data-metric="temp">34.8C</strong>
+                <div class="bar"><i style="width: 52%"></i></div>
+              </div>
+              <div class="signal-card">
+                <span>RS485 Packets</span>
+                <strong data-metric="packets">14.2k</strong>
+                <div class="bar"><i style="width: 77%"></i></div>
+              </div>
+            </div>
+            <div class="trace" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </aside>
         </div>
       </section>
 
       <section class="section intro" aria-label="Portfolio summary">
         <div>
           <p class="section-kicker">What we build</p>
-          <h2>Reliable embedded hardware from concept to field-ready system.</h2>
+          <h2>Industrial electronics from idea to working hardware.</h2>
         </div>
         <p>
-          MicroELab focuses on industrial embedded products where electronics,
-          firmware, sensing, communication, and enclosure constraints need to work
-          together. We help businesses build practical connected products,
-          automation interfaces, test fixtures, and custom control electronics
-          that can survive real operating conditions.
+          MicroELab combines PCB design, firmware, sensors, communication links,
+          and automation interfaces into practical systems. The focus is not only
+          a prototype that powers on, but hardware that can be installed,
+          measured, debugged, and improved in real operating conditions.
         </p>
       </section>
 
@@ -76,17 +104,17 @@
         <article>
           <span class="service-code">01</span>
           <h3>Embedded Product Development</h3>
-          <p>Architecture, component selection, board design, firmware, enclosure-fit thinking, and prototype bring-up.</p>
+          <p>Microcontroller hardware, firmware architecture, data acquisition, diagnostics, and prototype bring-up.</p>
         </article>
         <article>
           <span class="service-code">02</span>
           <h3>Industrial IoT Systems</h3>
-          <p>Sensor acquisition, telemetry nodes, wireless/wired communication, gateways, dashboards, and device diagnostics.</p>
+          <p>Monitoring nodes, gateways, field sensors, wireless telemetry, dashboards, and remote machine status.</p>
         </article>
         <article>
           <span class="service-code">03</span>
           <h3>Automation Electronics</h3>
-          <p>Relay control, isolated inputs, actuator drivers, machine interfaces, panel electronics, and production fixtures.</p>
+          <p>Relay control, isolated inputs, drivers, machine interfaces, panel electronics, and production fixtures.</p>
         </article>
       </section>
 
@@ -98,9 +126,9 @@
           <p class="section-kicker">Founder</p>
           <h2 id="founder-title">Fawad Butt</h2>
           <p>
-            Embedded and industrial electronics engineer focused on practical
-            hardware, firmware, prototyping, and automation-ready solutions for
-            real-world field environments.
+            Embedded and industrial electronics engineer focused on hardware,
+            firmware, prototyping, and automation-ready solutions for real-world
+            field environments.
           </p>
           <div class="contact-inline">
             <a href="tel:+923204077096">0320 4077096</a>
@@ -110,9 +138,16 @@
       </section>
 
       <section class="section" id="capabilities" aria-labelledby="capabilities-title">
-        <div class="section-heading">
-          <p class="section-kicker">Capabilities</p>
-          <h2 id="capabilities-title">Core Engineering Areas</h2>
+        <div class="section-heading split-heading">
+          <div>
+            <p class="section-kicker">Capabilities</p>
+            <h2 id="capabilities-title">Core Engineering Areas</h2>
+          </div>
+          <p>
+            Each service is designed around measurable industrial needs: stable
+            power, clean signals, reliable firmware, practical wiring, and simple
+            maintenance.
+          </p>
         </div>
         <div class="capability-grid">
           <article class="card">
@@ -128,69 +163,88 @@
           <article class="card">
             <span class="icon" aria-hidden="true">IoT</span>
             <h3>Industrial IoT</h3>
-            <p>Connected hardware for monitoring, telemetry, RS485/Modbus-style integrations, wireless links, and cloud-ready data paths.</p>
+            <p>Connected hardware for monitoring, telemetry, RS485, Modbus-style integrations, wireless links, and cloud-ready data paths.</p>
           </article>
           <article class="card">
-            <span class="icon" aria-hidden="true">PLC</span>
-            <h3>Automation Interfaces</h3>
-            <p>Control panels, relay outputs, isolated inputs, machine signals, actuator drivers, and production environment interfaces.</p>
+            <span class="icon" aria-hidden="true">QA</span>
+            <h3>Test Fixtures</h3>
+            <p>Bench tools for board testing, pass/fail checks, serial logging, wiring validation, and repeatable production QA.</p>
           </article>
         </div>
       </section>
 
       <section class="section projects" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <p class="section-kicker">Portfolio</p>
-          <h2 id="projects-title">Industrial Project Portfolio</h2>
+        <div class="section-heading split-heading">
+          <div>
+            <p class="section-kicker">Portfolio</p>
+            <h2 id="projects-title">Industrial Project Portfolio</h2>
+          </div>
+          <div class="filter-bar" role="group" aria-label="Filter projects">
+            <button class="filter-button is-active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="iot">IoT</button>
+            <button class="filter-button" type="button" data-filter="control">Control</button>
+            <button class="filter-button" type="button" data-filter="hardware">Hardware</button>
+            <button class="filter-button" type="button" data-filter="qa">QA</button>
+          </div>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
+
+        <div class="project-grid" data-project-grid>
+          <article class="project-card" data-category="iot hardware">
+            <div class="project-visual telemetry-visual" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
             <span>Industrial IoT</span>
             <h3>Remote Machine Monitoring Node</h3>
             <p>Sensor-based monitoring unit for temperature, vibration, runtime, and fault signals with telemetry-ready firmware.</p>
-            <ul>
-              <li>MCU firmware and data logging</li>
-              <li>Isolated digital inputs</li>
-              <li>RS485, Wi-Fi, GSM, or Ethernet options</li>
-            </ul>
+            <button class="text-button" type="button" data-project-detail="monitoring">View Details</button>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-category="control hardware">
+            <div class="project-visual relay-visual" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
             <span>Control Hardware</span>
             <h3>Motor and Actuator Control Board</h3>
-            <p>Compact control electronics for relays, solenoids, valves, motors, limit switches, and machine safety signals.</p>
-            <ul>
-              <li>Driver stages and protection</li>
-              <li>Field wiring connectors</li>
-              <li>Deterministic control behavior</li>
-            </ul>
+            <p>Compact electronics for relays, solenoids, valves, motors, limit switches, and machine safety signals.</p>
+            <button class="text-button" type="button" data-project-detail="control">View Details</button>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-category="iot hardware">
+            <div class="project-visual energy-visual" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
             <span>Smart Energy</span>
             <h3>Power and Energy Measurement Device</h3>
-            <p>Embedded metering device for current, voltage, power, and equipment usage monitoring in industrial environments.</p>
-            <ul>
-              <li>Analog front-end integration</li>
-              <li>Calibration workflow</li>
-              <li>Dashboard-ready output data</li>
-            </ul>
+            <p>Embedded metering device for current, voltage, power, and equipment usage monitoring.</p>
+            <button class="text-button" type="button" data-project-detail="energy">View Details</button>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-category="qa hardware">
+            <div class="project-visual fixture-visual" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
             <span>Automation QA</span>
             <h3>Production Test Fixture</h3>
-            <p>Bench hardware and firmware for board testing, pass/fail checks, serial logging, and repeatable production validation.</p>
-            <ul>
-              <li>Test jig electronics</li>
-              <li>Automated result logging</li>
-              <li>Fixture wiring and documentation</li>
-            </ul>
+            <p>Bench hardware and firmware for board testing, pass/fail checks, serial logging, and repeatable validation.</p>
+            <button class="text-button" type="button" data-project-detail="fixture">View Details</button>
           </article>
+        </div>
+      </section>
+
+      <section class="section systems" id="systems" aria-labelledby="systems-title">
+        <div class="section-heading">
+          <p class="section-kicker">System Thinking</p>
+          <h2 id="systems-title">From field signal to useful decision.</h2>
+        </div>
+        <div class="system-map" aria-label="Industrial IoT system flow">
+          <div><strong>01</strong><span>Sensors</span><small>Temperature, vibration, power, pressure, level, runtime</small></div>
+          <div><strong>02</strong><span>Embedded Node</span><small>MCU firmware, ADC, isolation, protection, logging</small></div>
+          <div><strong>03</strong><span>Connectivity</span><small>RS485, Modbus, GSM, Wi-Fi, Ethernet, MQTT</small></div>
+          <div><strong>04</strong><span>Dashboard</span><small>Alerts, trends, reports, maintenance signals</small></div>
         </div>
       </section>
 
       <section class="section tech-stack" aria-labelledby="tech-title">
         <div>
           <p class="section-kicker">Technology</p>
-          <h2 id="tech-title">Built for industrial constraints.</h2>
+          <h2 id="tech-title">Built around practical industrial constraints.</h2>
         </div>
         <div class="tech-list" aria-label="Technology stack">
           <span>ESP32</span>
@@ -214,19 +268,19 @@
           <h2 id="process-title">Engineering Process</h2>
         </div>
         <ol class="steps">
-          <li><strong>Define</strong><span>Requirements, operating conditions, interfaces, safety needs, and constraints.</span></li>
-          <li><strong>Design</strong><span>Schematics, PCB layout, firmware architecture, enclosure fit, and production planning.</span></li>
+          <li><strong>Define</strong><span>Requirements, field conditions, interfaces, safety needs, and constraints.</span></li>
+          <li><strong>Design</strong><span>Schematics, PCB layout, firmware architecture, enclosure fit, and test plan.</span></li>
           <li><strong>Prototype</strong><span>Bring-up, measurement, debugging, signal validation, and design iteration.</span></li>
-          <li><strong>Deliver</strong><span>Production files, firmware, test notes, documentation, and support for next steps.</span></li>
+          <li><strong>Deliver</strong><span>Production files, firmware, test notes, documentation, and next-step support.</span></li>
         </ol>
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div>
           <p class="section-kicker">Contact</p>
-          <h2 id="contact-title">Let's discuss your embedded project.</h2>
+          <h2 id="contact-title">Discuss your embedded or IoT project.</h2>
           <p>
-            Share your product idea, machine interface problem, PCB requirement,
+            Share your machine interface problem, sensor requirement, PCB idea,
             or firmware task. MicroELab can help move it from concept to working
             prototype.
           </p>
@@ -237,6 +291,17 @@
         </div>
       </section>
     </main>
+
+    <div class="project-modal" data-modal hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" data-close-modal aria-label="Close project details">x</button>
+        <p class="section-kicker" data-modal-kicker>Project</p>
+        <h2 id="modal-title" data-modal-title>Project title</h2>
+        <p data-modal-copy></p>
+        <ul data-modal-list></ul>
+      </article>
+    </div>
 
     <footer class="footer">
       <span>MicroELab</span>
